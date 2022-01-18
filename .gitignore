@@ -1,0 +1,6 @@
+Notes.md
+.vscode
+**/dask-worker-space
+**/.ipynb_checkpoints
+**/data
+.DS_Store
