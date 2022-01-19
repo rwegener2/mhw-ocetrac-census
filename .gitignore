@@ -3,4 +3,5 @@ Notes.md
 **/dask-worker-space
 **/.ipynb_checkpoints
 **/data
+**/env_vars.json
 .DS_Store

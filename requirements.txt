@@ -1,6 +1,0 @@
-s3fs
-xarray[complete]
-cartopy
-matplotlib
-fsspec
-numpy
