@@ -1,4 +1,0 @@
-{
-    "hot_water_path" : "./data/hot_water.zarr",
-    "land_mask_path": "./data/land_mask.zarr"
-}

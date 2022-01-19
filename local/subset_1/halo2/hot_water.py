@@ -5,12 +5,14 @@ Sets up a dask cluster.
 Creates a _ year climatology of MUR.
 Calculates 1 year of anomaly.
 Runs 1 year through Ocetrac.
+bbox from env_vars.json is read in as [minx, miny, maxx, maxy]
 """
 import time
 import json
 
 import fsspec
 import xarray as xr
+import dask
 from dask.distributed import Client
 
 
@@ -27,7 +29,10 @@ def main():
     print(executationtime, ' seconds')
 
     # Subset to region (~4 chunks)
-    mur_subset = mur.sel(lat=slice(32, 32.5), lon=slice(121.4, 122.2))
+    minx, miny, maxx, maxy = env_vars['bbox']
+    mur_subset = mur.sel(lat=slice(minx, maxx), lon=slice(miny, maxy))
+    # # .chunk(dict(time=-1)) fixes the 0 dim parallel error
+    mur_subset = mur_subset.chunk(dict(time=-1))
 
     # Calculate climatology array
     climatology = mur_subset.groupby(mur_subset.time.dt.month).mean()
@@ -62,11 +67,6 @@ def main():
     mask = mask.load()
     print('calculated land mask')
 
-    # Ocetrac
-    # Formatting
-    hot_water = hot_water.rename({'lon':'x', 'lat':'y'})
-    print('renamed vars')
-
     # Save data arrays
     # hot_water
     hot_water.to_dataset().to_zarr(
@@ -85,10 +85,10 @@ def main():
 
 if __name__ == '__main__':
     # Load environment variables
-    with open('./env_vars.json') as f:
+    with open('./scripted/env_vars.json') as f:
         env_vars = json.load(f)
-    # Set up Dask clusters
+    # Set up Dask cluster
+    dask.config.set(temporary_directory='/data/pacific/rwegener/')
     client = Client()
     print(client.dashboard_link)
-    input('proceed?')
     main()
