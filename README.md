@@ -1,4 +1,1 @@
-run with
-
-`docker run -p 8888:8888 jupyter/base-notebook`
-
+Repository to support Master's work. Notebooks are for inital data exploration.  Scripts are for running jobs.  Environment file creates a conda environment with conda 4.11.0.
