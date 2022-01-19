@@ -1,0 +1,6 @@
+{
+    "hot_water_path" : "where hot_water zarr from hot_water.py will be stored",
+    "land_mask_path": "where land_mask zarr from hot_water.py will be stored",
+    "temp_dir": "path for dask overflow",
+    "bbox": [32, 121.4, 32.5, 122.2]
+}
