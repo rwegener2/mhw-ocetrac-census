@@ -66,6 +66,8 @@ def main():
     mask = xr.where(mur_subset_time0 <= 270, 0, 1)
     mask = mask.load()
     print('calculated land mask')
+    executationtime = time.time() - starttime
+    print(executationtime, ' seconds')
 
     # Save data arrays
     # hot_water
@@ -85,10 +87,10 @@ def main():
 
 if __name__ == '__main__':
     # Load environment variables
-    with open('./scripted/env_vars.json') as f:
+    with open('./env_vars.json') as f:
         env_vars = json.load(f)
     # Set up Dask cluster
-    dask.config.set(temporary_directory='/data/pacific/rwegener/')
-    client = Client()
+    dask.config.set(temporary_directory=env_vars['temp_dir'])
+    client = Client(memory_limit='216GB')
     print(client.dashboard_link)
     main()
