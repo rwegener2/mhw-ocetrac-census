@@ -27,6 +27,8 @@ def main():
     # Open `land_mask`
     land_mask = xr.open_zarr(env_vars['land_mask_path'])
     land_mask = land_mask['land_mask']
+    land_mask = land_mask.chunk(dict(lat=-1))
+    land_mask = land_mask.chunk(dict(lon=-1))
 
     # Ocetrac - Run tracker
     Tracker = ocetrac.Tracker(hot_water, land_mask, radius=2, min_size_quartile=0.75, timedim = 'time', xdim = 'lon', ydim='lat', positive=True)
@@ -38,7 +40,7 @@ def main():
 
 if __name__ == '__main__':
     # Load environment variables
-    with open('./scripted/env_vars.json') as f:
+    with open('./env_vars.json') as f:
         env_vars = json.load(f)
     # Set up Dask cluster
     dask.config.set(temporary_directory=env_vars['temp_dir'])
