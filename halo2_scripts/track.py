@@ -38,6 +38,9 @@ def main():
     executationtime = time.time() - starttime
     print(executationtime, ' seconds')
 
+    # Save output
+    blobs.to_netcdf(env_vars['blobs_path'])
+
 if __name__ == '__main__':
     # Load environment variables
     with open('./env_vars.json') as f:

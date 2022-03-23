@@ -2,7 +2,7 @@
 This script runs a subsection of MUR data through Ocetrac.
 Specifically it:
 Sets up a dask cluster.
-Creates a _ year climatology of MUR.
+Creates a 1 year climatology of MUR.
 Calculates 1 year of anomaly.
 Runs 1 year through Ocetrac.
 bbox from env_vars.json is read in as [minx, miny, maxx, maxy]
