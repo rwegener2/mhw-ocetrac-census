@@ -4,4 +4,5 @@ Notes.md
 **/.ipynb_checkpoints
 **/data
 **/env_vars.json
+**/scratch/**
 .DS_Store
