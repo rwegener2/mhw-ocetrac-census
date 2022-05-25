@@ -1,0 +1,61 @@
+nohup: ignoring input
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-of_e4qta', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-h7ms529y', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-brxni4hl', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-u7dbg8u7', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-lvy_m0as', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-wjrlx535', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-7r11uss6', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-prg3yn3f', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-bjxliour', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-3sys877b', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-bdjcfl9q', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-17oa5elt', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-xt9x81pp', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-c8lz893p', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-0tte2kkl', purging
+distributed.diskutils - INFO - Found stale lock file and directory '/data/pacific/rwegener/dask-worker-space/worker-lkhidg9x', purging
+http://127.0.0.1:8787/status
+Start!  12:14:45
+access data ------
+preprocessing ---------
+loop --------
+About to compute:  12:28:35
+computing climatology/threshold ----- 
+Compute completed:  13:10:25
+saving datasets ------------
+End!  14:14:23
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/contextlib.py:120: UserWarning: Creating scratch directories is taking a surprisingly long time. This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))

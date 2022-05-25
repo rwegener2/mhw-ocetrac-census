@@ -1,0 +1,86 @@
+nohup: ignoring input
+http://127.0.0.1:8787/status
+Start!  16:29:45
+access data ------
+preprocessing ---------
+loop --------
+computing climatology/threshold ----- 
+distributed.worker - WARNING - Compute Failed
+Function:  execute_task
+args:      ((subgraph_callable-81ad2d42-3577-47fb-a9aa-dd124109032d, (<function concatenate_axes at 0x7f9dccfcff70>, [array([[[      nan,       nan,       nan, ..., 295.11   , 295.19998,
+         295.28   ],
+        [      nan,       nan,       nan, ..., 295.05   , 295.13   ,
+         295.21   ],
+        [      nan,       nan,       nan, ..., 295.00998, 295.09   ,
+         295.15   ],
+        ...,
+        [      nan,       nan,       nan, ...,       nan,       nan,
+               nan],
+        [      nan,       nan,       nan, ...,       nan,       nan,
+               nan],
+        [      nan,       nan,       nan, ...,       nan,       nan,
+               nan]],
+
+       [[      nan,       nan,       nan, ..., 295.3    , 295.38   ,
+         295.46   ],
+        [      nan,       nan,       nan, ..., 295.25   , 295.32   ,
+         295.38998],
+        [      nan,       nan,       nan, ..., 295.21   , 295.28   ,
+         295.34   ],
+        ...,
+        [      nan,       nan,       nan, ...,       na
+kwargs:    {}
+Exception: "IndexError('index -1 is out of bounds for axis 0 with size 0')"
+
+Traceback (most recent call last):
+  File "oliver_geopolar_gulf.py", line 95, in <module>
+    main()
+  File "oliver_geopolar_gulf.py", line 68, in main
+    climatology.compute()
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/dask/base.py", line 288, in compute
+    (result,) = compute(self, traverse=False, **kwargs)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/dask/base.py", line 570, in compute
+    results = schedule(dsk, keys, **kwargs)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/distributed/client.py", line 2693, in get
+    results = self.gather(packed, asynchronous=asynchronous, direct=direct)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/distributed/client.py", line 1969, in gather
+    return self.sync(
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/distributed/client.py", line 865, in sync
+    return sync(
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/distributed/utils.py", line 327, in sync
+    raise exc.with_traceback(tb)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/distributed/utils.py", line 310, in f
+    result[0] = yield future
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/tornado/gen.py", line 762, in run
+    value = future.result()
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/distributed/client.py", line 1834, in _gather
+    raise exception.with_traceback(traceback)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/dask/optimization.py", line 969, in __call__
+    return core.get(self.dsk, self.outkey, dict(zip(self.inkeys, args)))
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/dask/core.py", line 149, in get
+    result = _execute_task(task, cache)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/dask/core.py", line 119, in _execute_task
+    return func(*(_execute_task(a, cache) for a in args))
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/dask/utils.py", line 35, in apply
+    return func(*args, **kwargs)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/dask/array/routines.py", line 441, in _inner_apply_along_axis
+    return np.apply_along_axis(func1d, func1d_axis, arr, *func1d_args, **func1d_kwargs)
+  File "<__array_function__ internals>", line 5, in apply_along_axis
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/numpy/lib/shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "oliver_geopolar_gulf.py", line 48, in func1d_climatology
+    _, point_clim = mhw.detect(time, arr)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py", line 277, in detect
+    thresh_climYear[d-1] = np.percentile(nonans(tempClim[tt.astype(int)]), pctile)
+  File "<__array_function__ internals>", line 5, in percentile
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/numpy/lib/function_base.py", line 3818, in percentile
+    return _quantile_unchecked(
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/numpy/lib/function_base.py", line 3937, in _quantile_unchecked
+    r, k = _ureduce(a, func=_quantile_ureduce_func, q=q, axis=axis, out=out,
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/numpy/lib/function_base.py", line 3515, in _ureduce
+    r = func(a, **kwargs)
+  File "/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/numpy/lib/function_base.py", line 4050, in _quantile_ureduce_func
+    n = np.isnan(ap[-1])
+IndexError: index -1 is out of bounds for axis 0 with size 0
+/homes/metogra/rwegener/.conda/envs/mhw/lib/python3.8/site-packages/marineHeatWaves.py:406: RuntimeWarning: invalid value encountered in double_scalars
+  mhw['rate_decline'].append((mhw_relSeas[tt_peak] - mhw_relSeas[-1]) / (tt_end-tt_start-tt_peak))
